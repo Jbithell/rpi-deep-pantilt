@@ -70,13 +70,13 @@ TRAINER_DARWIN_CUSTOM_COMMANDS = [['brew', 'update'],
 class PostInstall(install):
 
     def run(self):
-        deps = 'Tensorflow/tensorflow-2.1.0-cp37-cp37m-linux_armv7l.whl'
+        #deps = 'Tensorflow/tensorflow-2.1.0-cp37-cp37m-linux_armv7l.whl'
 
-        install.run(self)
+        #install.run(self)
         # https://pip.pypa.io/en/stable/user_guide/#using-pip-from-your-program
-        subprocess.call([sys.executable, '-m', 'pip',
-                         'install', deps])
-
+        #subprocess.call([sys.executable, '-m', 'pip',
+        #                 'install', deps])
+        return True
 
 setup(
     author="James Bithell, University of York",
