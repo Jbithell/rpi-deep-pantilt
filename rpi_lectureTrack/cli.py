@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-"""Console script for rpi_deep_pantilt."""
+"""Console script for rpi_lectureTrack."""
 import logging
 import sys
 import click

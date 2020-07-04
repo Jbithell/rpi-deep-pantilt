@@ -1,9 +1,9 @@
 # Credits
 
-## Development Lead
+## Original Script
 
   - Leigh Johnson \<<hi@leighjohnson.me>\>
 
-## Contributors
+## Port to Lecture Tracking
 
-None yet. Why not be the first?
+  - James Bithell, for University of York \<<hi@jbithell.com>\>

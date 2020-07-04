@@ -79,21 +79,21 @@ class PostInstall(install):
 
 
 setup(
-    author="Leigh Johnson",
-    author_email='hi@leighjohnson.me',
+    author="James Bithell, University of York",
+    author_email='hi@jbithell.com',
     python_requires='>=3.7',
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: In Development',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: MIT License',
+        'License :: MIT License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
-    description="An example of deep object detection and tracking with a Raspberry Pi, PiCamera, and Pimoroni Pantilt Hat",
+    description="Lecturer tracking with a Raspberry Pi and PiCamera",
     entry_points={
         'console_scripts': [
-            'rpi-deep-pantilt=rpi_deep_pantilt.cli:main',
+            'rpi-lectureTrack=rpi_lectureTrack.cli:main',
         ],
     },
     cmdclass={'install': PostInstall},
@@ -103,15 +103,15 @@ setup(
     long_description_content_type='text/markdown',
     include_package_data=True,
     keywords='computer vision cv tensorflow raspberrypi detection tracking ',
-    name='rpi_deep_pantilt',
+    name='rpi_lectureTrack',
     packages=find_packages(include=[
-                           'rpi_deep_pantilt', 'rpi_deep_pantilt.*']),
-    package_data={'rpi_deep_pantilt': ['data/*.pbtxt']},
+                           'rpi_lectureTrack', 'rpi_lectureTrack.*']),
+    package_data={'rpi_lectureTrack': ['data/*.pbtxt']},
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/leigh-johnson/rpi-deep-pantilt',
-    version='1.2.0',
+    url='https://github.com/Jbithell/rpi-lectureTrack',
+    version='1.0.0',
     zip_safe=False,
 
 )

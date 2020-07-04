@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Tests for `rpi_deep_pantilt` package."""
+"""Tests for `rpi_lectureTrack` package."""
 
 import pytest
 
@@ -32,7 +32,7 @@ def test_command_line_interface():
     runner = CliRunner()
     result = runner.invoke(cli.main)
     assert result.exit_code == 0
-    assert 'rpi_deep_pantilt.cli.main' in result.output
+    assert 'rpi_lectureTrack.cli.main' in result.output
     help_result = runner.invoke(cli.main, ['--help'])
     assert help_result.exit_code == 0
     assert '--help  Show this message and exit.' in help_result.output

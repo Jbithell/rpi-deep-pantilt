@@ -1,32 +1,13 @@
-# Raspberry Pi Deep PanTilt
-
-[![image](https://img.shields.io/pypi/v/rpi_deep_pantilt.svg)](https://pypi.python.org/pypi/rpi-deep-pantilt)
-
-<!-- [![image](https://img.shields.io/travis/leigh-johnson/rpi_deep_pantilt.svg)](https://travis-ci.org/leigh-johnson/rpi_deep_pantilt) -->
-
-[![Documentation
-Status](https://readthedocs.org/projects/rpi-deep-pantilt/badge/?version=latest)](https://rpi-deep-pantilt.readthedocs.io/en/latest/?badge=latest)
-
-# READ THIS FIRST!
-
-A detailed walk-through is available in [Real-time Object Tracking with TensorFlow, Raspberry Pi, and Pan-tilt HAT](https://medium.com/@grepLeigh/real-time-object-tracking-with-tensorflow-raspberry-pi-and-pan-tilt-hat-2aeaef47e134).
+# Raspberry Pi Lecture Tracking
 
 # Build List
 
   - [Raspberry Pi 4 (4GB recommended)](https://www.raspberrypi.org/products/raspberry-pi-4-model-b/)
   - [Raspberry Pi Camera V2](https://www.raspberrypi.org/products/camera-module-v2/)
-  - [Pimoroni Pan-tilt Kit](https://shop.pimoroni.com/products/pan-tilt-hat?variant=22408353287)
   - Micro SD card 16+ GB
   - Micro HDMI Cable
   - [12" CSI/DSI ribbon for Raspberry Pi Camera](https://www.adafruit.com/product/1648) (optional, but highly recommended)
-  - [Coral Edge TPU USB Accelerator](https://coral.withgoogle.com/products/accelerator) (optional)
-  - [RGB NeoPixel Stick](https://www.adafruit.com/product/1426) (optional, makes lighting conditions more consistent)
-
-An example of deep object detection and tracking with a Raspberry Pi
-
-  - Free software: MIT license
-  - Documentation: <https://rpi-deep-pantilt.readthedocs.io>.
-
+  
 # Basic Setup
 
 Before you get started, you should have an up-to-date installation of Raspbian 10 (Buster) running on your Raspberry Pi. You'll also need to configure SSH access into your Pi. 
