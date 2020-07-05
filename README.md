@@ -34,6 +34,8 @@
 
 1. `cd rpi-lectureTrack`
 
+1. `wget https://drive.google.com/file/d/1bpXR_sP4FpkzxSWAn3b5LwTYTu_tGi4F/view` - __NB__ This needs work, as it doesn't download off GDrive quite as easily as needed.
+
 1. `pip install tensorflow-2.2.0-cp37-cp37m-linux_armv7l.whl`
 
 1. `pip install click picamera pillow smbus`
