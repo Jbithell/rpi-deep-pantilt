@@ -35,8 +35,7 @@ trainer_requirements = list(map(
 
 rpi_requirements = [
     'smbus',
-    'picamera',
-    'pantilthat>=0.0.7',
+    'picamera'
 ]
 
 rpi_requirements = list(map(

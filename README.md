@@ -36,6 +36,8 @@
 
 1. `pip install tensorflow-2.2.0-cp37-cp37m-linux_armv7l.whl`
 
+1. `pip install click picamera pillow smbus`
+
 1. `python setup.py install`
 
 ## Testing Detection
