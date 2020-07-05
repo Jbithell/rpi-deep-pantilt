@@ -1,7 +1,6 @@
 import logging
 from multiprocessing import Value, Process, Manager
 
-import pantilthat as pth
 import signal
 import sys
 
@@ -28,9 +27,7 @@ def signal_handler(sig, frame):
     # print a status message
     print("[INFO] You pressed `ctrl + c`! Exiting...")
 
-    # disable the servos
-    pth.servo_enable(1, False)
-    pth.servo_enable(2, False)
+    #TODO Close the Crestron Socket
 
     # exit
     sys.exit()
@@ -51,12 +48,12 @@ def set_servos(pan, tilt):
 
         # if the pan angle is within the range, pan
         if in_range(pan_angle, SERVO_MIN, SERVO_MAX):
-            pth.pan(pan_angle)
+            logging.info(pan_angle)
         else:
             logging.info(f'pan_angle not in range {pan_angle}')
 
         if in_range(tilt_angle, SERVO_MIN, SERVO_MAX):
-            pth.tilt(tilt_angle)
+            logging.info(tilt_angle)
         else:
             logging.info(f'tilt_angle not in range {tilt_angle}')
 
@@ -85,8 +82,9 @@ def pantilt_process_manager(
     rotation=0
 ):
 
-    pth.servo_enable(1, True)
-    pth.servo_enable(2, True)
+    #TODO Open the crestron socket
+
+
     with Manager() as manager:
         # set initial bounding box (x, y)-coordinates to center of frame
         center_x = manager.Value('i', 0)
