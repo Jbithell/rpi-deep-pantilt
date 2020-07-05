@@ -20,7 +20,7 @@ import tensorflow as tf
 from google.protobuf import text_format
 
 # app
-from rpi_deep_pantilt.detect.util import string_int_label_map_pb2
+from rpi_lectureTrack.detect.util import string_int_label_map_pb2
 
 
 def convert_label_map_to_categories(label_map,

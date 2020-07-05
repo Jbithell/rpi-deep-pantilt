@@ -9,9 +9,9 @@ import numpy as np
 from PIL import Image
 import tensorflow as tf
 
-from rpi_deep_pantilt import __path__ as rpi_deep_pantilt_path
-from rpi_deep_pantilt.detect.util.label import create_category_index_from_labelmap
-from rpi_deep_pantilt.detect.util.visualization import visualize_boxes_and_labels_on_image_array
+from rpi_lectureTrack import __path__ as rpi_lectureTrack_path
+from rpi_lectureTrack.detect.util.label import create_category_index_from_labelmap
+from rpi_lectureTrack.detect.util.visualization import visualize_boxes_and_labels_on_image_array
 
 LABELS = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 'truck', 'boat', 'traffic light', 'fire hydrant', 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog', 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe', 'backpack', 'umbrella', 'handbag', 'tie', 'suitcase', 'frisbee', 'skis', 'snowboard', 'sports ball', 'kite', 'baseball bat', 'baseball glove', 'skateboard', 'surfboard', 'tennis racket',
           'bottle', 'wine glass', 'cup', 'fork', 'knife', 'spoon', 'bowl', 'banana', 'apple', 'sandwich', 'orange', 'broccoli', 'carrot', 'hot dog', 'pizza', 'donut', 'cake', 'chair', 'couch', 'potted plant', 'bed', 'dining table', 'toilet', 'tv', 'laptop', 'mouse', 'remote', 'keyboard', 'cell phone', 'microwave', 'oven', 'toaster', 'sink', 'refrigerator', 'book', 'clock', 'vase', 'scissors', 'teddy bear', 'hair drier', 'toothbrush']
@@ -20,7 +20,7 @@ LABELS = ['person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus', 'train', 
 class SSDMobileNet_V3_Coco_EdgeTPU_Quant(object):
 
     EDGETPU_SHARED_LIB = 'libedgetpu.so.1'
-    PATH_TO_LABELS = rpi_deep_pantilt_path[0] + '/data/mscoco_label_map.pbtxt'
+    PATH_TO_LABELS = rpi_lectureTrack_path[0] + '/data/mscoco_label_map.pbtxt'
 
     def __init__(
         self,
@@ -200,7 +200,7 @@ class SSDMobileNet_V3_Coco_EdgeTPU_Quant(object):
 
 class SSDMobileNet_V3_Small_Coco_PostProcessed(object):
 
-    PATH_TO_LABELS = rpi_deep_pantilt_path[0] + '/data/mscoco_label_map.pbtxt'
+    PATH_TO_LABELS = rpi_lectureTrack_path[0] + '/data/mscoco_label_map.pbtxt'
 
     def __init__(
         self,

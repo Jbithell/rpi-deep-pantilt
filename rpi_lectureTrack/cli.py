@@ -5,20 +5,20 @@ import logging
 import sys
 import click
 
-from rpi_deep_pantilt.detect.camera import run_stationary_detect
+from rpi_lectureTrack.detect.camera import run_stationary_detect
 
-from rpi_deep_pantilt.detect.ssd_mobilenet_v3_coco import (
+from rpi_lectureTrack.detect.ssd_mobilenet_v3_coco import (
     SSDMobileNet_V3_Small_Coco_PostProcessed,
     SSDMobileNet_V3_Coco_EdgeTPU_Quant,
     LABELS as SSDMobileNetLabels
 )
-from rpi_deep_pantilt.detect.facessd_mobilenet_v2 import (
+from rpi_lectureTrack.detect.facessd_mobilenet_v2 import (
     FaceSSD_MobileNet_V2,
     FaceSSD_MobileNet_V2_EdgeTPU,
     LABELS as FaceSSDLabels
 )
-from rpi_deep_pantilt.control.manager import pantilt_process_manager
-from rpi_deep_pantilt.control.hardware_test import pantilt_test, camera_test
+from rpi_lectureTrack.control.manager import pantilt_process_manager
+from rpi_lectureTrack.control.hardware_test import pantilt_test, camera_test
 
 
 def validate_labels(labels):

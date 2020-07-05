@@ -42,26 +42,26 @@
 
 The `detect` command will start a PiCamera preview and render detected objects as an overlay. Verify you're able to detect an object before trying to track it. 
 
-`rpi-deep-pantilt detect person`
+`rpi-lectureTrack detect person`
 
 ```
-rpi-deep-pantilt detect --help
-Usage: rpi-deep-pantilt detect [OPTIONS] [LABELS]...
+rpi-lectureTrack detect --help
+Usage: rpi-lectureTrack detect [OPTIONS] [LABELS]...
 
-  rpi-deep-pantilt detect [OPTIONS] [LABELS]
+  rpi-lectureTrack detect [OPTIONS] [LABELS]
 
     LABELS (optional)     One or more labels to detect, for example:     
-    $ rpi-deep-pantilt detect person book "wine glass"
+    $ rpi-lectureTrack detect person book "wine glass"
 
     If no labels are specified, model will detect all labels in this list:
-    $ rpi-deep-pantilt list-labels
+    $ rpi-lectureTrack list-labels
 
     Detect command will automatically load the appropriate model
 
     For example, providing "face" as the only label will initalize
-    FaceSSD_MobileNet_V2 model $ rpi-deep-pantilt detect face
+    FaceSSD_MobileNet_V2 model $ rpi-lectureTrack detect face
 
-    Other labels use SSDMobileNetV3 with COCO labels $ rpi-deep-pantilt detect
+    Other labels use SSDMobileNetV3 with COCO labels $ rpi-lectureTrack detect
     person "wine class" orange
 
 Options:
@@ -81,23 +81,23 @@ Options:
 
 The following will start a PiCamera preview, render detected objects as an overlay, and track an object's movement whilst sending it out to Crestron
 
-`rpi-deep-pantilt track`
+`rpi-lectureTrack track`
 
 ```
-Usage: rpi-deep-pantilt track [OPTIONS] [LABEL]
+Usage: rpi-lectureTrack track [OPTIONS] [LABEL]
 
-  rpi-deep-pantilt track [OPTIONS] [LABEL]
+  rpi-lectureTrack track [OPTIONS] [LABEL]
 
   LABEL (required, default: person) Exactly one label to detect, for example:     
-  $ rpi-deep-pantilt track person
+  $ rpi-lectureTrack track person
 
   Track command will automatically load the appropriate model
 
   For example, providing "face" will initalize FaceSSD_MobileNet_V2 model
-  $ rpi-deep-pantilt track face
+  $ rpi-lectureTrack track face
 
   Other labels use SSDMobileNetV3 model with COCO labels 
-  $ rpi-deep-pantilt detect orange
+  $ rpi-lectureTrack detect orange
 
 Options:
   --loglevel TEXT  Pass --loglevel=DEBUG to inspect FPS and tracking centroid
@@ -113,7 +113,7 @@ Options:
 
 ## Valid labels for Object Detection/Tracking
 
-`rpi-deep-pantilt list-labels`
+`rpi-lectureTrack list-labels`
 
 The following labels are valid tracking targets.
 
@@ -125,7 +125,7 @@ The following labels are valid tracking targets.
 
 ### `FLOAT32` model (`ssd_mobilenet_v3_small_coco_2019_08_14`)
 
-`rpi-deep-pantilt detect` and `rpi-deep-pantilt track` perform inferences using this model. Bounding box and class predictions render at roughly *6 FPS* on a *Raspberry Pi 4*.  
+`rpi-lectureTrack detect` and `rpi-lectureTrack track` perform inferences using this model. Bounding box and class predictions render at roughly *6 FPS* on a *Raspberry Pi 4*.  
 
 The model is derived from  `ssd_mobilenet_v3_small_coco_2019_08_14` in [tensorflow/models](https://github.com/tensorflow/models). I extended the model with an NMS post-processing layer, then converted to a format compatible with TensorFlow 2.x (FlatBuffer). 
 
@@ -137,7 +137,7 @@ The MobileNetV3-SSD model in this package was derived from [TensorFlow's model z
 
 The PID control scheme in this package was inspired by [Adrian Rosebrock](https://github.com/jrosebr1) tutorial [Pan/tilt face tracking with a Raspberry Pi and OpenCV](https://www.pyimagesearch.com/2019/04/01/pan-tilt-face-tracking-with-a-raspberry-pi-and-opencv/)
 
-The original package [rpi-deep-pantilt](https://github.com/leigh-johnson/rpi-deep-pantilt) by Leigh Johnson and was created with
+The original package [rpi-lectureTrack](https://github.com/leigh-johnson/rpi-lectureTrack) by Leigh Johnson and was created with
 [Cookiecutter](https://github.com/audreyr/cookiecutter) and the
 [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage)
 project template.

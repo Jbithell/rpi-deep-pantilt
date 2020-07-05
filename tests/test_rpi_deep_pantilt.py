@@ -7,8 +7,8 @@ import pytest
 
 from click.testing import CliRunner
 
-from rpi_deep_pantilt import rpi_deep_pantilt
-from rpi_deep_pantilt import cli
+from rpi_lectureTrack import rpi_lectureTrack
+from rpi_lectureTrack import cli
 
 
 @pytest.fixture
