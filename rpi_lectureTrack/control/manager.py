@@ -10,7 +10,7 @@ from rpi_lectureTrack.control.pid import PIDController
 logging.basicConfig()
 LOGLEVEL = logging.getLogger().getEffectiveLevel()
 
-RESOLUTION = (320, 320)
+RESOLUTION = (1920, 1080)
 
 SERVO_MIN = -90
 SERVO_MAX = 90

@@ -11,7 +11,7 @@ from threading import Thread
 logging.basicConfig()
 LOGLEVEL = logging.getLogger().getEffectiveLevel()
 
-RESOLUTION = (320, 320)
+RESOLUTION = (1920, 1080)
 
 logging.basicConfig()
 
@@ -62,6 +62,7 @@ def run_pantilt_detect(center_x, center_y, labels, model_cls, rotation, resoluti
                 display_name = model.category_index[tracked_classes[0]]['name']
                 logging.info(
                     f'Tracking {display_name} center_x {x} center_y {y}')
+                #TODO Send to Crestron?
 
             overlay = model.create_overlay(frame, prediction)
             capture_manager.overlay_buff = overlay
@@ -140,7 +141,7 @@ class PiCameraStream(object):
     """
 
     def __init__(self,
-                 resolution=(320, 240),
+                 resolution=(1920,1080),
                  framerate=24,
                  vflip=False,
                  hflip=False,
