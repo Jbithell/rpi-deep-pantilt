@@ -37,24 +37,6 @@ def in_range(val, start, end):
     # determine the input vale is in the supplied range
     return (val >= start and val <= end)
 
-
-def set_servos(pan, tilt):
-    # signal trap to handle keyboard interrupt
-    signal.signal(signal.SIGINT, signal_handler)
-
-    while True:
-        pan_angle = -1 * pan.value
-        tilt_angle = tilt.value
-
-        # if the pan angle is within the range, pan
-        #TODO Maybe remove this or use it?
-        if in_range(pan_angle, SERVO_MIN, SERVO_MAX) != True:
-            logging.info(f'pan_angle not in range {pan_angle}')
-
-        if in_range(tilt_angle, SERVO_MIN, SERVO_MAX) != True:
-            logging.info(f'tilt_angle not in range {tilt_angle}')
-
-
 def pid_process(output, p, i, d, box_coord, origin_coord, action):
     # signal trap to handle keyboard interrupt
     signal.signal(signal.SIGINT, signal_handler)
@@ -116,17 +98,13 @@ def pantilt_process_manager(
         tilt_process = Process(target=pid_process,
                                args=(tilt, tilt_p, tilt_i, tilt_d, center_y, CENTER[1], 'tilt'))
 
-        servo_process = Process(target=set_servos, args=(pan, tilt))
-
         detect_processr.start()
         pan_process.start()
         tilt_process.start()
-        servo_process.start()
 
         detect_processr.join()
         pan_process.join()
         tilt_process.join()
-        servo_process.join()
 
 
 if __name__ == '__main__':
