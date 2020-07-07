@@ -47,14 +47,11 @@ def set_servos(pan, tilt):
         tilt_angle = tilt.value
 
         # if the pan angle is within the range, pan
-        if in_range(pan_angle, SERVO_MIN, SERVO_MAX):
-            logging.info(pan_angle)
-        else:
+        #TODO Maybe remove this or use it?
+        if in_range(pan_angle, SERVO_MIN, SERVO_MAX) != True:
             logging.info(f'pan_angle not in range {pan_angle}')
 
-        if in_range(tilt_angle, SERVO_MIN, SERVO_MAX):
-            logging.info(tilt_angle)
-        else:
+        if in_range(tilt_angle, SERVO_MIN, SERVO_MAX) != True:
             logging.info(f'tilt_angle not in range {tilt_angle}')
 
 
