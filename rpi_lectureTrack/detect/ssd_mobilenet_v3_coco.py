@@ -24,7 +24,7 @@ class SSDMobileNet_V3_Coco_EdgeTPU_Quant(object):
 
     def __init__(
         self,
-        base_url='https://github.com/leigh-johnson/rpi-deep-pantilt/releases/download/v1.0.0/',
+        base_url='https://github.com/leigh-johnson/rpi-deep-pantilt/releases/download/v1.0.0/', #TODO change this
         model_name='ssdlite_mobilenet_edgetpu_coco_quant',
         input_shape=(1920, 1080),
         min_score_thresh=0.50,
@@ -204,10 +204,10 @@ class SSDMobileNet_V3_Small_Coco_PostProcessed(object):
 
     def __init__(
         self,
-        base_url='https://github.com/leigh-johnson/rpi-deep-pantilt/releases/download/v1.0.0/',
+        base_url='https://github.com/leigh-johnson/rpi-deep-pantilt/releases/download/v1.0.0/', #TODO Change this
         model_name='ssd_mobilenet_v3_small_coco_2019_08_14',
         input_shape=(1920, 1080),
-        min_score_thresh=0.6
+        min_score_thresh=0.6 #TODO evaluate this
 
     ):
 
