@@ -11,7 +11,7 @@ from threading import Thread
 logging.basicConfig()
 LOGLEVEL = logging.getLogger().getEffectiveLevel()
 
-RESOLUTION = (1920, 1080)
+RESOLUTION = (320, 320)
 
 logging.basicConfig()
 
@@ -141,7 +141,7 @@ class PiCameraStream(object):
     """
 
     def __init__(self,
-                 resolution=(1920,1080),
+                 resolution=(320, 240),
                  framerate=24,
                  vflip=False,
                  hflip=False,

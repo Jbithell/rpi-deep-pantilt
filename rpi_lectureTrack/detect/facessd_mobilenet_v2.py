@@ -25,7 +25,7 @@ class FaceSSD_MobileNet_V2_EdgeTPU(object):
         self,
         base_url='https://github.com/leigh-johnson/rpi-deep-pantilt/releases/download/v1.0.1/',
         model_name='facessd_mobilenet_v2_quantized_320x320_open_image_v4_tflite2',
-        input_shape=(1920, 1080),
+        input_shape=(320, 320),
         min_score_thresh=0.50,
         tflite_model_file='model_postprocessed_quantized_128_uint8_edgetpu.tflite'
     ):
@@ -191,7 +191,7 @@ class FaceSSD_MobileNet_V2(object):
         self,
         base_url='https://github.com/leigh-johnson/rpi-deep-pantilt/releases/download/v1.0.1/',
         model_name='facessd_mobilenet_v2_quantized_320x320_open_image_v4_tflite2',
-        input_shape=(1920, 1080),
+        input_shape=(320, 320),
         min_score_thresh=0.6
 
     ):
