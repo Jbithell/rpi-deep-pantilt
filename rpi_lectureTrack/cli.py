@@ -66,6 +66,7 @@ def detect(labels, loglevel, edge_tpu, rotation):
 
     # TypeError: nargs=-1 in combination with a default value is not supported.
     if not labels:
+        logging.info("No labels specified - so using all")
         labels = SSDMobileNetLabels
     # Sanity-check provided labels are supported by model
     else:

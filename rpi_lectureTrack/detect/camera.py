@@ -51,6 +51,10 @@ def run_pantilt_detect(center_x, center_y, labels, model_cls, rotation, resoluti
 
                 track_target = prediction.get('detection_boxes')[
                     tracked_idxs[0]]
+
+                confidence = prediction.get('detection_scores')[
+                    tracked_idxs[0]]
+
                 # [ymin, xmin, ymax, xmax]
                 y = int(
                     RESOLUTION[1] - ((np.take(track_target, [0, 2])).mean() * RESOLUTION[1]))
@@ -61,7 +65,7 @@ def run_pantilt_detect(center_x, center_y, labels, model_cls, rotation, resoluti
 
                 display_name = model.category_index[tracked_classes[0]]['name']
                 logging.info(
-                    f'Tracking {display_name} center_x {x} center_y {y}')
+                    f'Tracking {display_name} center_x {x} center_y {y} with confidence {confidence}')
                 #TODO Send to Crestron?
 
             overlay = model.create_overlay(frame, prediction)
